@@ -43,23 +43,17 @@ header h2 {
 }
 
 .meny-knappar a {
-    background-color: rgb(171, 15, 15);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border-radius: 7px;
-    box-shadow: 0 4px 5px rgb(87, 85, 85);
-    text-align: center;
+    color: #a21111; /* Mörkröd som accent */
+    padding: 5px 10px;
     text-decoration: none;
-    font-size: 16px;
-    transition: transform 0.5s, box-shadow 0.5s;
-    white-space: nowrap; 
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
 }
 
-.meny-knappar a:hover {
-    cursor: pointer;
-    transform: scale(1.0);
-    box-shadow: 0 6px 7px rgb(71, 69, 69);
-    background-color: #a21111;
+.meny-knappar a.active {
+    font-weight: bold;
+    border-color: #a21111;
 }
 
 .meny-knappar a.active {
