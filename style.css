@@ -24,13 +24,14 @@ header h2 {
     color: rgb(171, 15, 15);
     font-family: 'Times New Roman', Times, serif;
     font-size: 28px;
-    margin-bottom: 20px; /* Lägg till lite mellanrum under rubriken */
+    margin-bottom: 2px; /* Lägg till lite mellanrum under rubriken */
 }
 
 /* Telefonnr */
 .Telefonnr {
     font-style: italic;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 /* Menyknappar */
