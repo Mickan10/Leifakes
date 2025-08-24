@@ -5,29 +5,40 @@ const images = document.querySelectorAll('.images img');
 
 let currentIndex = 0;
 
-function updateCarousel() {
-    const imageWidth = images[0].offsetWidth;
-    const gap = parseInt(window.getComputedStyle(imagesContainer).gap) || 0;
-    imagesContainer.style.transform = `translateX(-${currentIndex * (imageWidth + gap)}px)`;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const imagesContainer = document.querySelector('.images');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    const images = document.querySelectorAll('.images img');
 
-rightArrow.addEventListener('click', () => {
-    const maxIndex = images.length - 3; // Anpassa för antal synliga bilder
-    if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateCarousel();
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        if (images.length === 0) return;
+        const imageWidth = images[0].offsetWidth;
+        const gap = parseInt(window.getComputedStyle(imagesContainer).gap) || 0;
+        imagesContainer.style.transform = `translateX(-${currentIndex * (imageWidth + gap)}px)`;
     }
+
+    rightArrow?.addEventListener('click', () => {
+        const maxIndex = images.length - 3;
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    leftArrow?.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
 });
 
-leftArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-    }
-});
-
-window.addEventListener('resize', updateCarousel);
-updateCarousel();
 
 
 
