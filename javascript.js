@@ -39,7 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
 });
 
+//meny småskärmar
+const hamburger = document.getElementById('hamburger');
+const meny = document.getElementById('menyKnapp');
 
+hamburger.addEventListener('click', () => {
+    meny.classList.toggle('show');
+});
 
 
 

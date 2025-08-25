@@ -1,13 +1,14 @@
 /* Grundinställningar */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
     background-color: #edebeb;
     color: #333;
     height: 100%;
@@ -25,7 +26,7 @@ header h2 {
     color: rgb(171, 15, 15);
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
-    margin-bottom: 2px; /* Lägg till lite mellanrum under rubriken */
+    margin-bottom: 2px; 
 }
 
 /* Telefonnr */
@@ -35,34 +36,59 @@ header h2 {
     margin-bottom: 20px;
 }
 
-/* Menyknappar */
+/* Menyknappar container */
 .meny-knappar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrera menyknapparna */
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
     width: 100%; 
+    padding: 20px 0; /* lite luft ovanför/under */
 }
 
+/* Länkar */
 .meny-knappar a {
-    color: #a21111; /* Mörkröd som accent */
-    padding: 5px 10px;
+    position: relative;
+    color: #222; 
+    padding: 8px 12px;
     text-decoration: none;
     font-size: 18px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s, color 0.3s;
-    font-weight: 300px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
-.meny-knappar a.active {
-    font-weight: bold;
-    border-color: #a21111;
+/* Elegant underline-effekt */
+.meny-knappar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #a21111; /* accentfärg */
+    transition: width 0.3s ease;
 }
 
-.meny-knappar a.active {
-    text-decoration: underline;
-    font-weight: bold;
+/* Hover-effekt */
+.meny-knappar a:hover {
+    color: #a21111; 
 }
+
+.meny-knappar a:hover::after {
+    width: 100%;
+}
+
+/* Aktiv länk */
+.meny-knappar a.active {
+    color: #a21111;
+    font-weight: 700;
+}
+
+.meny-knappar a.active::after {
+    width: 100%;
+}
+
 /* Linjer under menyn */
 .underline-container {
     display: flex;
@@ -134,22 +160,20 @@ header h2 {
 
 /* Kontakta oss knapp */
 .contact-knapp {
-    padding: 15px 30px;
-    background-color: rgb(171, 15, 15);
+    padding: 6px 30px;
+    background-color: rgb(122, 11, 11);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
     font-size: 17px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 5px rgb(2, 2, 2);
     position: relative;
     top: 20px;
 }
 
 .contact-knapp:hover {
     cursor: pointer;
-    transform: scale(1.1);
-    background-color: #8f1010;
+    background-color: #4f0909;
 }
 
 #bussbild {
@@ -184,7 +208,8 @@ header h2 {
 /* Förbättrade rubriker */
 .bussar h3 {
     font-size: 22px;
-    color: rgb(171, 15, 15);
+    color: rgb(0, 0, 0);
+    border-bottom: #951f1f solid 3px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -354,6 +379,23 @@ footer {
     color: #bbb;
 }
 
+/* Hamburger */
+.hamburger {
+    display: none;  /* visas bara på små skärmar */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #222;
+    border-radius: 2px;
+}
+
 /* --- Header för tablet och mindre skärmar --- */
 @media (max-width: 992px) {
    header {
@@ -467,19 +509,29 @@ footer {
         text-align: center;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .meny-knappar {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-        gap: 10px;
+        flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-height: 0;           /* gömmen */
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        gap: 10px;
+    }
+
+    .meny-knappar.show {
+        max-height: 500px;       
     }
 
     .meny-knappar a {
-        font-size: 16px;
-        width: 100% !important;
+        width: 100%;
         text-align: center;
-        padding: 8px 0;
+        padding: 12px 0;
+        border-radius: 8px;
+        font-size: 16px;
     }
 
     .hero h1 {

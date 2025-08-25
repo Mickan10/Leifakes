@@ -20,18 +20,19 @@
 
 /* Intro-text */
 .intro-box {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.8;
   color: #222;
-  text-align: center;
+  text-align: start;
   font-weight: 500;
 }
 
 /* Kontakt + Bild */
 .kontakt-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  justify-content: space-between; /* sprider ut info och bilder */
+  align-items: flex-start; /* justerar toppen */
+  gap: 20px; /* avstånd mellan info och bilder */
 }
 
 .kontakt-info-box {
@@ -46,6 +47,7 @@
   font-size: 2rem;
   margin-bottom: 25px;
   color: #000;
+  border-bottom: 3px solid #aa380e;
 }
 
 .kontakt-info-box p {
@@ -65,24 +67,23 @@
   text-decoration: underline;
 }
 
-.kontakt-info-box,
-.photo-box {
-  min-width: 0; /* viktig fix för overflow */
+.kontakt-info-box {
+  flex: 1; /* tar upp vänsterdel */
 }
 
-.photo-box img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.photo-box img:hover {
-  transform: scale(1.03);
-}
+.kontakt-bilder { 
+  display: flex; 
+  direction: row; 
+  flex: 1; /* tar upp högerdel */ 
+  flex-wrap: wrap; /* tillåter radbrytning */ 
+  justify-content: center; /* centrerar bilder */ 
+  gap: 10px; 
+  margin-top: 10px; } 
+  
+  .kontakt-bilder img { 
+    width: 250px; 
+    height: auto; 
+    border-radius: 8px; }
 
 /* Jobb-sektion */
 .job-box {
@@ -102,6 +103,7 @@
   margin-bottom: 20px;
   font-size: 1.8rem;
   color: #000;
+  border-bottom: 3px solid #aa380e;
 }
 
 /* ===== Responsiv design ===== */
@@ -119,12 +121,12 @@
   }
   
   .kontakt-info-box,
-  .photo-box {
+  .kontakt-bilder {
     flex: 1 1 100%; /* full bredd under varandra */
     max-width: 100%;
   }
   
-  .photo-box img {
+  .kontakt-bilder img {
     width: 100%; 
     height: auto;
     object-fit: cover;

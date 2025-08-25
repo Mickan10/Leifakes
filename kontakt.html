@@ -6,22 +6,29 @@
 <title>Kontakt - Leif-Åkes Buss</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="kontakt.css">
+<link rel="stylesheet" href="kontakt.css">  
 </head>
 <body>
 
-<header>
-    <h2>| Leif-Åkes Buss |</h2>
-    <p class="Telefonnr">Telefon: 0506-106 44</p>
-    <nav class="meny-knappar">
-        <ul>
+    <header>
+        <h2>| Leif-Åkes Buss |</h2>
+        <p class="Telefonnr">Telefon: 0506-106 44</p>
+
+        <!-- Hamburger knapp -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menyknappar -->
+        <nav class="meny-knappar" id="menyKnapp">
             <a href="index.html">Hem</a>
             <a href="resor.html">Våra resor</a>
             <a href="kontakt.html" class="active">Kontakt</a>
             <a href="resevillkor.html">Resevillkor</a>
-        </ul>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <div class="underline-container">
     <div class="underline red"></div>
@@ -46,15 +53,17 @@
         <h3>Kontakta Oss</h3>
         <p><strong>Adress:</strong><br>Leif-Åkes Buss AB<br>Torstorp Dalen 6<br>545 90 Töreboda</p>
         <p><strong>Telefon:</strong> 0506-106 44</p>
-        <p><strong>Mobil Leif:</strong> 070-671 06 40</p>
         <p><strong>Mobil Mikael:</strong> 070-671 06 41</p>
+        <p><strong>Mobil Leif:</strong> 070-671 06 40</p>
         <p><strong>E-post:</strong> <a href="mailto:info@leifakesbuss.se">info@leifakesbuss.se</a></p>
       </div>
 
-      <!-- Bild -->
-      <div class="photo-box">
-        <img src="bilder/th (1).jpg" alt="Bild på kontaktuppgifter">
+      <!-- Bilder -->
+      <div class="kontakt-bilder">
+        <img src="bilder/th.jpg" alt="Buss 1">
+        <img src="bilder/buss03_stor.gif" alt="Buss 2">
       </div>
+
     </div>
 
     <!-- Jobb -->

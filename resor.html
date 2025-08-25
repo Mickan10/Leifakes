@@ -16,16 +16,23 @@
 
 </head>
 <body>
-    <header>
+  <header>
         <h2>| Leif-Åkes Buss |</h2>
         <p class="Telefonnr">Telefon: 0506-106 44</p>
-        <nav class="meny-knappar">
-            <ul>
-                <a href="index.html">Hem</a>
-                <a href="resor.html" class="active">Våra resor</a>
-                <a href="kontakt.html">Kontakt</a>
-                <a href="resevillkor.html">Resevillkor</a>
-            </ul>
+
+        <!-- Hamburger knapp -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menyknappar -->
+        <nav class="meny-knappar" id="menyKnapp">
+            <a href="index.html">Hem</a>
+            <a href="resor.html" class="active">Våra resor</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="resevillkor.html">Resevillkor</a>
         </nav>
     </header>
 
@@ -112,22 +119,31 @@
 
     <!----kontaka oss knapp-->
         <div class="kontakt-knapp-container">
-            <a href="kontakt.html" class="kontakta">Kontakta oss för att boka resa</a>
+            <a href="kontakt.html" class="kontakta">Till Kontaktsidan </a>
         </div>
     </div>
+
     <!-- Höger kolumn: Facebook -->
     <div class="resor-fb">
-  <div class="fb-page" 
-       data-href="https://www.facebook.com/leifakesbuss" 
-       data-tabs="timeline" 
-       data-width=""  
-       data-height="500" 
-       data-small-header="false" 
-       data-adapt-container-width="true" 
-       data-hide-cover="false" 
-       data-show-facepile="true">
-  </div>
-</div>
+        <div class="fb-page" 
+            data-href="https://www.facebook.com/leifakesbuss" 
+            data-tabs="timeline" 
+            data-width=""  
+            data-height="500" 
+            data-small-header="false" 
+            data-adapt-container-width="true" 
+            data-hide-cover="false" 
+            data-show-facepile="true">
+        </div>
+    </div>
+
+    <!-- Längst ner på sidan -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v17.0" 
+            nonce="ABC123">
+    </script>
+
 
 
 </div>

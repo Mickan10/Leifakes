@@ -41,9 +41,10 @@
 /* --- Text --- */
 .text-resor h3 {
   font-size: 1.8rem;
-  color: #b22222;
+  color: #000000;
   margin-bottom: 5px;
   text-align: center;
+  border-bottom: 3px solid #aa380e;
 }
 
 .text-resor h4 {
@@ -106,10 +107,15 @@
 /* --- Facebook-widget --- */
 .resor-fb {
   width: 100%;
+  max-width: 355px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.fb-page, .fb-page span, .fb-page iframe {
+    width: 100% !important; /* gör plugin responsiv */
 }
 
 .fb-page {
@@ -123,8 +129,8 @@
 
 /* --- Knapp --- */
 .kontakta {
-  padding: 15px 30px;
-  background-color: rgb(171, 15, 15);
+  padding: 15px 10px;
+  background-color: rgb(98, 8, 8);
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -241,12 +247,13 @@
 
   .resor-fb {
     margin: 0 auto 12px auto;
+    width: 100%;
+    max-width: 355px; /* standard max-bredd för fb-widget */
   }
 
-  .fb-page {
+  .fb-page, .fb-page span, .fb-page iframe {
     width: 100% !important;
-    max-width: 100% !important;
-    height: 300px;
+    height: 600px !important; /* sätt tillräcklig höjd för timeline */
     margin: 0 auto 12px auto;
   }
 
@@ -287,3 +294,4 @@
     height: auto;
   }
 }
+
