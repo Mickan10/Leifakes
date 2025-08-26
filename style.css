@@ -245,36 +245,33 @@ header h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
     gap: 20px;
-    background: linear-gradient(rgba(231, 231, 231, 0.819), rgba(215, 213, 213, 0.753), rgba(175, 171, 171, 0.688));
+    
 }
 
 /* Bildbehållare */
 .photo-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 70%;
-    overflow: hidden;
-    border-radius: 12px;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-/* Bilder i rad */
+/* --- Bilder i rad (desktop) --- */
 .images {
-    display: flex;
-    transition: transform 0.5s ease;
-    will-change: transform;
-    gap: 10px; /* Mellanrum mellan bilder */
+  display: flex;
+  gap: 10px;
 }
 
-/* Enskilda bilder */
 .images img {
-    width: calc((100% - 20px) / 3);
-    height: 280px; 
-    flex-shrink: 0; 
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  flex: 1;
 }
 
 /* Piltangenter */
@@ -525,18 +522,23 @@ footer {
         border-radius: 10px;  
         }
 
-      .photo-container {
-        width: 120%;            /* lite större än föräldern */
-        margin-left: -10%;      /* centrerar den större containern */
-        overflow: visible;      /* låter bilderna sticka ut */
-    }
+      .images {
+    display: flex;
+    overflow-x: auto;           /* swipe i sidled */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+  }
 
-    .images img {
-        width: auto;           /* behåll proportioner */
-        height: 250px;         /* eller 50vh om du vill */
-        object-fit: cover;
-        margin-right: 0px;    /* lite mellanrum mellan bilderna */
-    }
+  .images img {
+    flex: 0 0 90%;              /* varje bild fyller 90% av skärmen */
+    scroll-snap-align: center;  /* stannar snyggt på mitten */
+    border-radius: 10px;
+  }
+
+  .photo-container {
+    border-radius: 0;           /* full bredd på mobil */
+  }
 
     .buss-photos {
         flex-direction: column;
@@ -544,9 +546,8 @@ footer {
     }
 
     .arrow {
-        font-size: 28px;
-        padding: 8px;
-    }
+    display: none;  /* göm pilar på små skärmar */
+  }
 
     /* Footer */
     .footer-container {
