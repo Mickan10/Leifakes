@@ -49,7 +49,6 @@
     padding: 20px;
     margin-top: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .resevillkor .payment-info ul,
@@ -73,22 +72,81 @@
     margin-bottom: 10px;
 }
 
-/* Media Queries for smaller screen sizes */
-@media (max-width: 768px) {
+/* Tablets & små laptops */
+@media (max-width: 992px) {
     .resevillkor {
-        padding: 20px;
+        padding: 25px;
+        font-size: 19px; /* lite större text */
     }
 
     .resevillkor h3 {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .resevillkor h4 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .resevillkor ul li {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .resevillkor .payment-info,
+    .resevillkor .cancellation-info,
+    .resevillkor .travel-details,
+    .resevillkor .terms-info,
+    .resevillkor .bus-info,
+    .resevillkor .special-needs {
+        padding: 18px;
+    }
+}
+
+/* Mobiler */
+@media (max-width: 768px) {
+    .resevillkor {
+        padding: 20px;
+        font-size: 20px; /* större text för läsbarhet */
+    }
+
+    .resevillkor h3 {
+        font-size: 30px;
+    }
+
+    .resevillkor h4 {
+        font-size: 22px;
+    }
+
+    .resevillkor ul li {
+        font-size: 18px;
+    }
+
+    .resevillkor .payment-info,
+    .resevillkor .cancellation-info,
+    .resevillkor .travel-details,
+    .resevillkor .terms-info,
+    .resevillkor .bus-info,
+    .resevillkor .special-needs {
+        padding: 20px;
+    }
+}
+
+/* Små mobiler */
+@media (max-width: 480px) {
+    .resevillkor {
+        padding: 15px;
+        font-size: 21px; /* extra stor text på små skärmar */
+    }
+
+    .resevillkor h3 {
+        font-size: 32px;
+    }
+
+    .resevillkor h4 {
+        font-size: 24px;
+    }
+
+    .resevillkor ul li {
+        font-size: 19px;
     }
 
     .resevillkor .payment-info,
@@ -98,30 +156,5 @@
     .resevillkor .bus-info,
     .resevillkor .special-needs {
         padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .resevillkor h3 {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .resevillkor h4 {
-        font-size: 16px;
-    }
-
-    .resevillkor ul li {
-        font-size: 14px;
-    }
-
-    .resevillkor .payment-info,
-    .resevillkor .cancellation-info,
-    .resevillkor .travel-details,
-    .resevillkor .terms-info,
-    .resevillkor .bus-info,
-    .resevillkor .special-needs {
-        padding: 10px;
     }
 }

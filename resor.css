@@ -104,32 +104,34 @@
   min-width: 140px;
 }
 
-/* --- Facebook-widget --- */
+/* Föräldern */
 .resor-fb {
   width: 100%;
-  max-width: 355px;
+  max-width: 500px; /* gör rutan bredare än tidigare */
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 20px auto;
 }
 
+/* Själva Facebook-plugin */
 .fb-page, .fb-page span, .fb-page iframe {
-    width: 100% !important; /* gör plugin responsiv */
+  width: 100% !important; /* behåller responsiviteten */
 }
 
 .fb-page {
-  width: 100% !important; 
-  max-width: 100% !important; 
-  min-width: 320px; /* säkerställ minst mobilbredd */
-  height: 500px;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 320px;
+  height: 600px; /* gör rutan högre */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   border-radius: 10px;
 }
 
+
 /* --- Knapp --- */
 .kontakta {
-  padding: 15px 10px;
+  padding: 15px 20px;       
   background-color: rgb(98, 8, 8);
   color: #fff;
   border-radius: 5px;
@@ -138,11 +140,13 @@
   font-weight: bold;
   transition: transform 0.5s ease, background-color 0.3s ease;
   box-shadow: 0 4px 5px rgb(2, 2, 2);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto; /* alltid centrerad */
+  display: block;      
+  width: 200px;             
+  max-width: 80%;          
+  margin: 0 auto;         
   text-align: center;
 }
+
 
 .kontakta:hover {
   cursor: pointer;
@@ -170,9 +174,10 @@
     height: 200px;
   }
 
-  .kiel-resa .resor-bilder-row img {
+  .kiel-resa .resor-bilder-row {
     flex: 1 1 48%;
     height: auto;
+    gap: 3px;
   }
 
   .text-resor {
@@ -213,11 +218,11 @@
   }
 
   .text-resor h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .text-resor p {
-    font-size: 0.95rem;
+    font-size: 18px;
   }
 
   .kiel-resa .resor-bilder-row {
@@ -225,9 +230,10 @@
     gap: 10px;
   }
 
-  .kiel-resa .resor-bilder-row img {
+  .kiel-resa .resor-bilder-row {
     flex: 1 1 100%;
     height: auto;
+    gap: 2px;
   }
 }
 
@@ -269,7 +275,7 @@
   }
 
   .text-resor p, .bokning p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.3;
   }
 
@@ -282,6 +288,7 @@
   .text-resor ul li {
     display: block;
     margin: 4px 0;
+    font-size: 18px;
   }
 
   .text-resor ul li:before {
@@ -289,9 +296,10 @@
     color: #000;
   }
 
-  .kiel-resa .resor-bilder-row img {
+  .kiel-resa .resor-bilder-row {
     width: 100%;
     height: auto;
+    gap: 0px;
   }
 }
 

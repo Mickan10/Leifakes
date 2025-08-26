@@ -39,13 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
 });
 
-//meny småskärmar
-const hamburger = document.getElementById('hamburger');
-const meny = document.getElementById('menyKnapp');
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.meny-knappar');
 
-hamburger.addEventListener('click', () => {
-    meny.classList.toggle('show');
+    if(hamburger && menu){
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('show'); 
+        });
+    }
 });
+
 
 
 

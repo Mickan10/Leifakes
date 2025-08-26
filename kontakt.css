@@ -1,4 +1,8 @@
 /* ===== Kontakt Wrapper ===== */
+.kontakt-sektion {
+    display: none;
+}
+
 .kontakt-wrapper {
   display: flex;
   justify-content: center;
@@ -135,23 +139,58 @@
 
 
 @media (max-width: 600px) {
-  .kontakt-box {
-    padding: 30px 20px;
+   .kontakt-box {
+    position: relative;
+    padding-top: 220px; /* ger plats för Buss 2 högst upp */
   }
+
+  .kontakt-wrapper {
+    padding: 40px 10px;
+  }
+
+    .kontakt-sektion {
+        display: block;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 10px;
+        border-bottom: 3px solid #aa380e;
+    }
+
+  .kontakt-bilder img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px;
+    object-fit: cover;
+    z-index: 1;
+    height: auto;
+    border-radius: 10px;
+  }
+  
   .intro-box {
-    font-size: 18px;
+    font-size: 19px;
+    margin-top: 19px;
+    text-align: justify;
+    text-justify: inter-word; /* standard, justerar ord */
+    word-spacing: 0em;
   }
   .kontakt-info-box, .photo-box, .job-box {
-    padding: 25px;
+    padding: 20px;
   }
   .kontakt-info-box h3, .job-box h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   .kontakt-info-box p {
-    font-size: 15px;
+    font-size: 19px;
   }
-  .apply-btn {
-    font-size: 14px;
+  .job-box p {
+    font-size: 19px;
     padding: 10px 20px;
+    text-align: center;
   }
 }
