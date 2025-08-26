@@ -92,13 +92,13 @@
   gap: 3px;
   justify-content: center;
   flex-wrap: wrap; /* bryter rader på små skärmar */
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 
 .kiel-resa .resor-bilder-row img {
   flex: 1 1 48%; /* max två bilder bredvid varandra */
   max-width: 100%;
-  height: 260px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
   min-width: 140px;
