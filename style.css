@@ -180,26 +180,28 @@ header h2 {
   margin-left: 50px;
 }
 
-/* Kontakta oss knapp */
 .contact-knapp {
-    display: inline-block;  
-    justify-content: center; 
-    align-items: center;     
+    display: block;   
     margin: 20px auto 0 auto; 
     padding: 10px 30px;
+    max-width: 200px;
+    width: auto;
+    text-align: center;
     background-color: rgb(122, 11, 11);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
     font-size: 17px;
-    transition: background-color 0.3s ease;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
+
 
 .contact-knapp:hover {
     cursor: pointer;
     background-color: #a51717;
 }
+
 
 .bussar {
   width: 50%;           
