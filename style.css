@@ -130,7 +130,7 @@ header h2 {
   background: rgba(232, 228, 228, 0.9);
   padding: 20px 25px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin: 0 -60px 20px -60px;
   text-align: center;
 }
 
@@ -640,7 +640,7 @@ footer {
   }
 
   .hero-intro h1 {
-    font-size: 20px;
+    font-size: 25px;
     border-bottom: 1px solid #831111;
   }
 
