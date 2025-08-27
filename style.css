@@ -139,6 +139,7 @@ header h2 {
   color: #000000;
   margin-bottom: 10px;
   white-space: nowrap;
+  border-bottom: 2px solid #831111;
 }
 
 .hero-intro p {
@@ -172,16 +173,19 @@ header h2 {
 }
 
 #bussbild {
-  flex: 0 0 45%;             /* Bild tar 55% */
+  flex: 0 0 49%;            
   max-width: 55%;
   border-radius: 12px;
   object-fit: cover;
+  margin-left: 50px;
 }
 
 /* Kontakta oss knapp */
 .contact-knapp {
-    display: inline-block;  /* Viktigt för centering */
-    margin: 20px auto 0 auto; /* Centrerar horisontellt */
+    display: inline-block;  
+    justify-content: center; 
+    align-items: center;     
+    margin: 20px auto 0 auto; 
     padding: 10px 30px;
     background-color: rgb(122, 11, 11);
     color: #fff;
@@ -198,7 +202,7 @@ header h2 {
 }
 
 .bussar {
-  width: 50%;           /* Text tar halva bredden */
+  width: 50%;           
   text-align: left;
 }
 
