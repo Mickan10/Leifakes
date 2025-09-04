@@ -14,6 +14,10 @@ body {
     height: 100%;
 }
 
+.buss-photos img {
+  visibility: hidden; /* döljer bilderna men behåller utrymmet */
+}
+
 header {
     display: flex;
     flex-direction: column; /* Byt från row till column för att ordna rubrik och meny under varandra */
