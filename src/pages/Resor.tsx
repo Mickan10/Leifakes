@@ -108,7 +108,7 @@ export default function Resor() {
 
                 {/* Länk */}
                 {resa.länk && (
-                  <a href={resa.länk.url} className="btn btn--primary" target="_blank" rel="noreferrer">
+                  <a href={resa.länk.url} className="btn btn--outline" style={{ alignSelf: 'flex-start' }} target="_blank" rel="noreferrer">
                     {resa.länk.text}
                   </a>
                 )}
