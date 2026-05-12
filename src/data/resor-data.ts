@@ -51,7 +51,6 @@ const resor: Resa[] = [
       'Miljöavgift',
     ],
     datum: [
-      { datum: '24 april', pris: 'från 2 925 kr' },
       { datum: '8 maj',    pris: 'från 2 925 kr' },
       { datum: '29 maj',   pris: 'Fullbokat', full: true },
     ],
@@ -73,8 +72,7 @@ const resor: Resa[] = [
       { plats: 'Skövde (enl. överenskommelse)', tid: '06.40' },
     ],
     datum: [
-      { datum: '28 april (Tisdag)', pris: '' },
-      { datum: '25 maj (Måndag)',   pris: '' },
+      { datum: '25 maj (Måndag)', pris: '' },
     ],
     prisText: '300 kr inkl. bussresa tur & retur',
     länk: { url: 'https://www.gekas.se/', text: 'Läs mer om Gekås Ullared' },

@@ -2,6 +2,24 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import resor from '../data/resor-data'
 
+const MÅNADER: Record<string, number> = {
+  januari: 0, februari: 1, mars: 2, april: 3,
+  maj: 4, juni: 5, juli: 6, augusti: 7,
+  september: 8, oktober: 9, november: 10, december: 11,
+}
+
+function datumHarPasserat(datumStr: string): boolean {
+  const match = datumStr.match(/(\d+)\s+(\w+)/)
+  if (!match) return false
+  const dag = parseInt(match[1])
+  const månad = MÅNADER[match[2].toLowerCase()]
+  if (månad === undefined) return false
+  const idag = new Date()
+  idag.setHours(0, 0, 0, 0)
+  const resDatum = new Date(idag.getFullYear(), månad, dag)
+  return resDatum < idag
+}
+
 export default function Resor() {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,7 +90,7 @@ export default function Resor() {
                     <div className="resa-info-block">
                       <h4><i className="fa-solid fa-calendar-days"></i> Datum</h4>
                       <ul>
-                        {resa.datum.map((d, i) => (
+                        {resa.datum.filter(d => !datumHarPasserat(d.datum)).map((d, i) => (
                           <li key={i}>{d.datum}</li>
                         ))}
                       </ul>
@@ -85,7 +103,7 @@ export default function Resor() {
                   <div className="resa-datum">
                     <h4><i className="fa-solid fa-calendar-days"></i> Datum & priser</h4>
                     <div className="datum-grid">
-                      {resa.datum.map((d, i) => (
+                      {resa.datum.filter(d => !datumHarPasserat(d.datum)).map((d, i) => (
                         <div key={i} className={`datum-chip${d.full ? ' datum-chip--full' : ''}`}>
                           {d.datum}<span>{d.pris}</span>
                         </div>

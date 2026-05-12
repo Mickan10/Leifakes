@@ -10,7 +10,6 @@ export default function Resevillkor() {
         <div className="villkor-grid">
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-credit-card"></i></div>
             <h3>Betalning</h3>
             <ul>
               <li>Anmälningsavgift på 250 kr + ev. avbeställningsskydd vid anmälan. Resterande belopp betalas 14 dagar före avresan.</li>
@@ -21,7 +20,6 @@ export default function Resevillkor() {
           </div>
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-ban"></i></div>
             <h3>Avbeställning & skydd</h3>
             <ul>
               <li>Avbeställningsskydd betalas samtidigt med anmälningsavgiften och täcker kostnader vid sjukdom (läkarintyg krävs).</li>
@@ -31,7 +29,6 @@ export default function Resevillkor() {
           </div>
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-circle-info"></i></div>
             <h3>Reseinformation</h3>
             <ul>
               <li>Drycker, entréavgifter och aftonnöjen ingår inte om ej annat anges.</li>
@@ -42,7 +39,6 @@ export default function Resevillkor() {
           </div>
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-file-contract"></i></div>
             <h3>Övriga villkor</h3>
             <ul>
               <li>Ändringar kan göras i programmet om det behövs, och resan sker endast om tillräckligt antal deltagare anmäler sig.</li>
@@ -53,7 +49,6 @@ export default function Resevillkor() {
           </div>
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-bus"></i></div>
             <h3>Busstransport & behov</h3>
             <ul>
               <li>Alla resor sker med förstklassiga turistbussar med AC, läslampor, högtalare, fotstöd och toalett.</li>
@@ -63,7 +58,6 @@ export default function Resevillkor() {
           </div>
 
           <div className="villkor-kort">
-            <div className="villkor-icon"><i className="fa-solid fa-utensils"></i></div>
             <h3>Specialkost & övrigt</h3>
             <ul>
               <li>Meddela vid bokning om särskild kost, t.ex. vegetarisk, glutenfri, laktosfri eller sockerfri kost.</li>
